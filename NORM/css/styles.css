@@ -1,0 +1,168 @@
+body {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: Georgia, serif;
+    margin-bottom: 100px;
+}
+
+header{
+    border-bottom: solid 5px #a9ceff;
+    padding: 5px;
+    font-size: 20px;
+    color: #a9ceff;
+    background-color:  #052349;
+    position: sticky;
+    top:0;
+}
+
+.portais{
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;  
+}
+
+.introduzir-ligações{
+    padding: 15px 0;
+    font-size: 30px;
+}
+
+.ligações{
+    flex:1;
+    margin: 0 10px;
+    align-self: center;
+}
+
+nav ul{
+    float: right;
+    display: flex;
+    list-style: none;
+}
+
+ul li a{
+    padding: 10px;
+    color:#a9ceff;
+    text-decoration: none;
+}
+
+
+.titulo{
+    background: rgb(255, 253, 253);
+    padding-bottom: 150px;
+    padding-top: 150px;
+    display:flex;
+    justify-content: center;
+    border-bottom: solid 5px #052349;
+}
+
+.escrit{
+    margin-right: 5%;
+}
+
+h1{
+    margin-top: 50px;
+    margin-bottom: 0px;
+    color: #093366;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 50px;
+}
+
+img{
+    width: 400px;
+}
+
+p{
+    font-size: 1.125em;
+    line-height: 1.4em;
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: justify;
+}
+
+.introd{
+    background-color:white;
+    color: #052349;
+    justify-content: center;
+    border-bottom: solid 5px #052349;
+    display: flex;
+    padding-bottom: 150px;
+    padding-top: 80px;
+}
+
+h2{
+    border-bottom: solid 5px #a9ceff;
+    padding: 10px;
+    font-size: 20px;
+    color: #a9ceff;
+    background-color:  #052349;
+    width: 300px;
+}
+
+h5{
+    border-bottom: solid 5px #a9ceff;
+    padding: 10px;
+    font-size: 20px;
+    color: #a9ceff;
+    background-color:  #052349;
+    width: 300px;
+}
+
+.desenvolviment{
+    background-color:white;
+    color: #052349;
+    justify-content: center;
+    border-bottom: solid 5px #052349;
+    display: flex;
+    padding-bottom: 50px;
+    padding-top: 90px;
+}
+
+.primeira_norm{
+    background-color:white;
+    color: #052349;
+    justify-content: center;
+    border-bottom: solid 5px #052349;
+    display: flex;
+    padding-bottom: 150px;
+    padding-top: 80px;
+}
+
+.seg_norm{
+    background-color:white;
+    color: #052349;
+    justify-content: center;
+    border-bottom: solid 5px #052349;
+    display: flex;
+    padding-bottom: 150px;
+    padding-top: 80px;
+}
+
+.terceir_norm{
+    background-color:white;
+    color: #052349;
+    justify-content: center;
+    border-bottom: solid 5px #052349;
+    display: flex;
+    padding-bottom: 150px;
+    padding-top: 80px;
+}
+
+.concl{
+    background-color:white;
+    color: #052349;
+    justify-content: center;
+    border-bottom: solid 5px #052349;
+    display: flex;
+    padding-bottom: 150px;
+    padding-top: 80px; 
+}
+
+.bibliograf{
+    background-color:white;
+    color: #052349;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 150px;
+    padding-top: 80px; 
+}

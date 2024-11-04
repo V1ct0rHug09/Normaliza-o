@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalização de Banco de Dados</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="introduzir_ligações">
+        <div class="portais">
+            <h3>Banco de Dados</h3>
+            <nav class="ligações">
+                <ul>
+                    <li><a href="#introdução">Introdução</a></li>
+                    <li><a href="#desenvolvimento">Desenvolvimento</a></li>
+                    <li><a href="#prim_norm">1º Forma</a></li>
+                    <li><a href="#segun_norm">2º Forma</a></li>
+                    <li><a href="#terc_norm">3º Forma</a></li>
+                    <li><a href="#conclusão">Conclusão</a></li>
+                    <li><a href="#bibliografia">Bibliografia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="titulo">
+        <div class="escrit">
+            <h1>Normalização de<br>
+                Banco de Dados</h1>
+            <h4>Realizado por:<br>
+                Victor Hugo Ferreira da Silva<br>
+                Miguel Soares de Souza</h4>
+        </div>
+        <div>
+            <figure>
+                <img src="img/normalização-foto.jpeg" alt="imagem">
+            </figure>
+        </div>
+    </section>
+    <section class="introd" id="introdução">
+        <div>
+            <h2>Introdução</h2>
+            <p> A <strong>Normalização</strong> é focada na prevenção de problemas com repetição e atualização de dados,
+                assim como o cuidado com a integridade dos dados.
+                Consiste em um processo de análise de uma relação para assegurar
+                que o banco de dados seja bem formado, que tenham atribuítos coerêntes e corretos
+                para o tipo de dados que vai armazenar. É o decompor das relações
+                com as anomalias de atualização para produzir relações menores e bem estruturadas.
+                Mediante a decomposição das relações presentes no banco de dados, este processo busca minimizar
+                anomalias,
+                isto é, repetições e redundâncias entre os dados. Ao identificar anomalias,
+                o conjunto de regras da normalização tentará eliminá-las e redefinir as relações afetadas,
+                para que tudo se encaixe em seu devido lugar depois das alterações.
+                Ou seja em uma relação de normalização de banco de dados podemos inserir, excluir ou
+                modificar dados sem gerar anomalias, seu objetivo é minimizar redundâncias e anormalias de
+                inclusão, exclusão e modificação.
+            </p>
+        </div>
+    </section>
+    <section class="desenvolviment" id="desenvolvimento">
+        <div>
+            <h5>Desenvolvimento</h5>
+            <p>Este conceito foi apresentado originalmente em um artigo científico publicado pela IBM de autoria do
+                matemático Edgar F. Codd,
+                intitulado "Um modelo de dados relacionais para grandes bancos de dados compartilhados" (1970).
+                Codd se centra nos valores dos elementos relacionados no banco de dados, não em ligações ou agrupamentos
+                específicos.</p><br>
+            <p>As formas normais, existem várias dessas regras para garantir o sucesso da estruturação do nosso banco de
+                dados.<br>
+                Porém três delas são as mais utilizadas na normalização:<br><br>
+                <strong>1ºForma de Normalização (1FN)</strong><br>
+                A 1FN exige que a tabela esteja em formato tabular, onde todos os atributos são atômicos (não
+                divisíveis). Isso significa que cada coluna deve conter um único valor, e cada linha deve ser
+                única.<br>
+                <strong>2ºForma de Normalização (2NF)</strong>
+                A 2NF requer que a tabela esteja na 1NF e que todos os atributos não-chave sejam totalmente
+                dependentes da chave primária. Isso elimina dependências parciais.<br>
+                <strong>3º Forma de Normalização</strong>
+                A 3NF requer que a tabela esteja na 2NF e que não haja dependências transitivas (um atributo
+                não-chave depender de outro atributo não-chave).
+            </p>
+        </div>
+    </section>
+    <section class="primeira_norm" id="prim_norm">
+        <div>
+            <h2>1º Primeira Forma de Normalização (1FN)</h2>
+            <p>Em 1NF, cada célula de uma tabela deve conter um único valor atômico, ou seja, não pode conter valores
+                compostos ou repetidos.
+                Por exemplo, vamos supor que temos uma tabela de cliente com colunas para código do cliente, nome,
+                telefone
+                e endereço do cliente.
+                Para aplicar a 1NF, devemos separar a lista de disciplinas em uma tabela separada de modo que cada linha
+                representa um único cliente e um único telefone, como mostrado abaixo:
+
+                Tabela antes de aplicarmos a 1FN:</p>
+            <div>
+                <figure>
+                    <img src="img/1º NF_exemplo1.jpg" alt="imagem">
+                </figure>
+            </div>
+            <p>Tabela depois da aplicação de 1FN:</p>
+            <div>
+                <figure>
+                    <img src="img/1ºNF _ norm.jpg" alt="imagem">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="seg_norm" id="segun_norm">
+        <div>
+            <h2>2ºSegunda Forma de Normalização (2FN)</h2>
+            <p>Em 2NF, uma tabela deve estar na 1NF e todos os seus atributos não chave devem depender completamente da
+                chave primária.
+                Exemplo, vamos imaginar que agora temos uma tabela de peças que
+                relaciona o código das peças e fornecedores, quantidade em estoque, estado do fornecedor,
+                telefone e quantidades de caixa.
+                Para aplicar a 2NF, devemos dividir esta tabela em duas: uma para as peças,
+                relacionando quantidade em estoque e quantidade em caixa, e outra para fornecedor:
+                Tabela antes de aplicarmos a 2FN:</p>
+            <div>
+                <figure>
+                    <img src="img/2ºNF_ ex2.jpg" alt="imagem">
+                </figure>
+            </div>
+            <p>Depois da aplicação 2FN:</p>
+            <div>
+                <figure>
+                    <img src="img/2ºNF_ex3.jpg" alt="imagem">
+                </figure>
+            </div>
+            <p>Agora, cada tabela possui uma responsabilidade única: a tabela de peças registra quantas peças tem no
+                estoque de cada caixa, enquanto a tabela de fornecedor registra o estado e o código do fornecedor associadas a essas
+                peças.
+                Isso garante que não haja dependência transitiva entre os atributos, satisfazendo a segunda forma normal.
+                (2NF).</p>
+        </div>
+    </section>
+
+    <section class="terceir_norm" id="terc_norm">
+        <div>
+            <h2>3º Terceira Forma de Normalização (3FN)</h2>
+            <p>Na terceira forma normal trabalhamos precisamente com a organização dos atributos que dependem uns dos
+                outros,
+                porém que não são atributos chaves (primárias ou estrangeiras).
+                Caso necessário, é criada uma tabela secundária para reestruturar a relação de dependência entre os
+                atributos.
+                Essas tabelas devem ter a chave primária ou estrangeira.
+                Usamos agora um exemplo referente a :</p>
+            <div>
+                <figure>
+                    <img src="img/3ºNF_ ex2.jpg" alt="imagem">
+                </figure>
+            </div>
+            <p>Tenha em conta que existe uma dependência entre o atributo 'nome de vendedor' e com o 'código do vendedor',
+                entretanto, estes atributos não dependem da chave principal da tabela que é 'o código do produto'.
+                Depois da aplicação 3FN:</p>
+            <div>
+                <figure>
+                    <img src="img/3ºNF _ex3.jpg" alt="imagem">
+                </figure>
+            </div>
+            <p>Neste caso, criamos uma nova tabela para relacionar o nome do vendedor com seu código,
+                e também removemos as relações de dependência entre atributos que não são chaves da tabela original.</p>
+        </div>
+    </section>
+    <section class="concl" id="conclusão">
+        <div>
+            <h2>Conclusão</h2>
+            <p>A normalização de bancos de dados é essencial para organizar dados de forma eficiente,
+                reduzindo redundâncias e evitando inconsistências. Ao aplicar as formas normais, melhora-se a
+                integridade,
+                segurança nas operações e facilita-se a manutenção e escalabilidade do sistema. No entanto,
+                o uso excessivo da normalização pode aumentar a complexidade das consultas e o número de tabelas,
+                devendo ser equilibrado com as necessidades de desempenho do sistema.<br>
+                Aprender a Normalização é um passo importante para quem está começando a modelar um banco de dados
+                e certamente resulta em uma maior eficiência na hora de abstrair o banco e seus atributos.
+            </p>
+        </div>
+    </section>
+    <section id="bibliografia" class="bibliograf">
+        <h2>Bibliografia</h2>
+    </section>
+</body>
+
+</html>
